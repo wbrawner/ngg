@@ -1,6 +1,5 @@
-# Number-Guessing Game
-----------------------
-
+Number-Guessing Game
+--------------------
 A simple game where the computer picks a number and the player must guess what it is.
 
 ## Gameplay:
@@ -20,3 +19,10 @@ A simple game where the computer picks a number and the player must guess what i
   * ability to receive input
   * number comparison calculations
   * give reply on number
+
+## Future Challenges
+* ~~Ask player if they want to play again~~
+* Reverse roles: human picks number and AI guesses
+* Multiplayer: play with two humans
+* Spectator: play with two AIs
+* Menu: select between different game modes
