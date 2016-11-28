@@ -26,3 +26,4 @@ A simple game where the computer picks a number and the player must guess what i
 * Multiplayer: play with two humans
 * Spectator: play with two AIs
 * Menu: select between different game modes
+* Build a GUI 
