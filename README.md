@@ -1,5 +1,8 @@
 # Number-Guessing Game
 ----------------------
+
+A simple game where the computer picks a number and the player must guess what it is.
+
 ## Gameplay:
 1. Computer generates random number
 2. Computer starts "I'm thinking of a number..."
