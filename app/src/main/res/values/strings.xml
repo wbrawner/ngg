@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Number Guess</string>
+    <string name="guess_prompt">I\'m thinking of a number between 1 and 100...</string>
+    <string name="guess_response">Enter a number between 1 and 100</string>
+    <string name="guess_button">Guess</string>
+    <string name="too_small">That number is too small!</string>
+    <string name="too_big">That number is too big!</string>
+    <string name="correct_answer">Correct! You took %1$s tries to guess the right answer.</string>
+    <string name="game_over">You win!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Adivina el Número</string>
+    <string name="guess_prompt">Estoy pensando en un número entre 1 y 100...</string>
+    <string name="guess_response">Adivina un número entre 1 y 100</string>
+    <string name="guess_button">Adivina</string>
+    <string name="too_small">¡Ese número es demasiado pequeño!</string>
+    <string name="too_big">¡Ese número es demasiado grande!</string>
+    <string name="correct_answer">¡Correcto! Lo adivinaste en %1$s intentos.</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="ok">OK</string>
+    <string name="game_over">¡Ganaste!</string>
+</resources>
