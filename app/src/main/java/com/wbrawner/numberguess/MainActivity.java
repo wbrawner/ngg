@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity
 
     public void resetGame() {
         this.guessInput.setText("50");
+		this.guessInput.setSelection(2);
         this.user = null;
         this.ng = null;
 
