@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Map;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 public class GameFragment extends Fragment  {
 
-    private EditText guessInput;
+    private TextView guessInput;
     private Button guessButton;
     private Player user;
     private NumberGuess ng;
@@ -50,7 +51,40 @@ public class GameFragment extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_game, container, false);
-        guessInput = (EditText) rootView.findViewById(R.id.guessInput);
+        guessInput = (TextView) rootView.findViewById(R.id.guessInput);
+        for (int i = 0; i <= 9; i++) {
+            int buttonId = getActivity().getResources().getIdentifier(
+                    "button_" + i,
+                    "id",
+                    getActivity().getPackageName()
+            );
+            final Button inputBtn = (Button) rootView.findViewById(buttonId);
+            inputBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (guessInput.length() < 3)
+                        guessInput.append(inputBtn.getText());
+                }
+            });
+        }
+        ((Button) rootView.findViewById(R.id.button_clear)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                guessInput.setText("");
+            }
+        });
+        ((Button) rootView.findViewById(R.id.button_delete)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (guessInput.getText().length() > 0)
+                    guessInput.setText(
+                            guessInput.getText().toString().substring(
+                                    0,
+                                    guessInput.getText().length() - 1
+                            )
+                    );
+            }
+        });
         guessButton = (Button) rootView.findViewById(R.id.guessButton);
         guessButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +119,6 @@ public class GameFragment extends Fragment  {
 
     public void resetGame() {
         guessInput.setText("50");
-        guessInput.setSelection(2);
         user = null;
         ng = null;
 
