@@ -97,7 +97,7 @@ public class GameFragment extends Fragment  {
                     );
                 }
                 setResponse(
-                        ng.checkAnswer(user)
+                        ng.checkAnswer(user.getLastGuess())
                 );
                 guessInput.setText(null);
             }
@@ -137,7 +137,7 @@ public class GameFragment extends Fragment  {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, null, duration);
         if (response.get("code").equals("correct")) {
-            String popup = getActivity().getString(R.string.correct_answer, response.get("count"));
+            String popup = getActivity().getString(R.string.correct_answer, user.getGuessCount());
             text = getString(R.string.game_over);
             gameOver(popup);
         } else {

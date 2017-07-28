@@ -5,7 +5,7 @@
     <string name="guess_button">Adivina</string>
     <string name="too_small">¡Ese número es demasiado pequeño!</string>
     <string name="too_big">¡Ese número es demasiado grande!</string>
-    <string name="correct_answer">¡Correcto! Lo adivinaste en %1$s intentos.</string>
+    <string name="correct_answer">¡Correcto! Lo adivinaste en %1$d intentos.</string>
     <string name="no">No</string>
     <string name="yes">Sí</string>
     <string name="ok">OK</string>

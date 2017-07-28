@@ -5,22 +5,23 @@ import java.util.Map;
 
 public class NumberGuess {
 
-    protected int answer = 0;
+    private int answer = 0;
 
     public void setAnswer() {
         this.answer = (int) (Math.random() * 100);
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
     }
 
     public int getAnswer() {
         return this.answer;
     }
 
-    public Map checkAnswer(Player user) {
+    public Map checkAnswer(int guess) {
         Map<String, String> response = new HashMap<>();
-        int guess = user.getLastGuess();
-        String guessCount = String.valueOf(user.getGuesses().size());
         if (guess == this.getAnswer()) {
-            response.put("count", guessCount);
             response.put("code", "correct");
         } else {
             if (guess > this.getAnswer()) {

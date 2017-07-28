@@ -5,7 +5,16 @@ import java.util.ArrayList;
 
 public class Player {
 
-    protected List<Integer> guesses = new ArrayList<Integer>();
+    public Player() {}
+
+
+    public Player(int[] guesses) {
+        for (int guess : guesses) {
+            this.guesses.add(guess);
+        }
+    }
+
+    private List<Integer> guesses = new ArrayList<Integer>();
 
     public void clearGuesses() {
         this.guesses = new ArrayList<Integer>();
@@ -13,6 +22,10 @@ public class Player {
 
     public void addGuess(int guess) {
         this.guesses.add(guess);
+    }
+
+    public int getGuessCount() {
+        return guesses.size();
     }
     
     public int getLastGuess() {
